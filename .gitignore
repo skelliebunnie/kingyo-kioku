@@ -1,0 +1,18 @@
+# files
+package-lock.json
+.vercel
+data/*.sql
+*.log
+needs-sentences.tsv
+words.json
+
+# folders
+node_modules
+tatoeba
+temp
+dist
+
+# secrets
+*.env
+.env.*
+!.env.example

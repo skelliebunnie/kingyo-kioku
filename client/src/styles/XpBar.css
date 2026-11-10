@@ -1,0 +1,94 @@
+/* src/components/XpBar.css - deliberately plain; restyle to match the rest of the app. */
+.xpbar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0.5rem;
+}
+
+.xpbar__level {
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.xpbar__total {
+  min-width: 5.5rem;
+  text-align: right;
+  white-space: nowrap;
+  opacity: 0.8;
+  font-variant-numeric: tabular-nums;
+}
+
+/* The hover/focus target. Taller than the visible bar so it's easy to point at. */
+.xpbar__bar {
+  position: relative;
+  flex: 1;
+  padding: 0.5rem 0;
+  cursor: help;
+}
+
+.xpbar__track {
+  height: 0.6rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(128, 128, 128, 0.25);
+}
+
+.xpbar__fill {
+  height: 100%;
+  background: var(--accent-400, #2e7d4f);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .xpbar__fill {
+    transition: width 0.4s ease;
+  }
+}
+
+/* The details card: same look as the XP pop-up. Hidden until hover or focus. */
+.xpbar__tip {
+  position: absolute;
+  bottom: calc(100% + 0.25rem);
+  left: 0;
+  z-index: 15;
+  min-width: 12rem;
+  padding: 0.6rem 0.9rem;
+  color: CanvasText;
+  background: Canvas;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-left: 4px solid var(--level-3, #4aa84f);
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.xpbar__bar:hover .xpbar__tip,
+.xpbar__bar:focus .xpbar__tip {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .xpbar__tip {
+    transition: opacity 0.15s ease, visibility 0.15s;
+  }
+}
+
+.xpbar__tip p {
+  margin: 0;
+}
+
+.xpbar__tip-title {
+  opacity: 0.8;
+}
+
+.xpbar__tip-next {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.xpbar__tip-detail {
+  opacity: 0.8;
+}

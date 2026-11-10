@@ -1,0 +1,18 @@
+[
+  {
+    "ja": "昨日、寿司を食べた",
+    "en": "I ate sushi yesterday.",
+    "word": "食べる",
+    "target": "食べた",
+    "reading": "たべた"
+  },
+  {
+    "ja": "日本の電車は便利だ",
+    "en": "Japanese trains are convenient.",
+    "word": "日本",
+    "wordReading": "にほん",
+    "target": "日本",
+    "reading": "にほん",
+    "alternates": ["にっぽん"]
+  }
+]

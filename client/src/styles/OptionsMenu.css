@@ -1,0 +1,75 @@
+/* src/components/OptionsMenu.css - deliberately plain; restyle to match the rest of the app. */
+.options {
+  position: relative;
+  display: inline-block;
+}
+
+/* Floating variant: stuck to the bottom-left corner of the window. */
+.options--floating {
+  position: fixed;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 40;
+}
+
+.options__button {
+  color: var(--neutral);
+  background: var(--accent-400);
+  border-color: var(--accent-600);
+}
+
+.options__button[aria-expanded="true"] {
+  background: var(--accent-600);
+  border-color: var(--accent-400);
+}
+
+.options__panel {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  left: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 40ch;
+  padding: 0.9rem 1.1rem;
+  color: CanvasText;
+  background: Canvas;
+  border: 1px solid var(--accent-600);
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.options__panel--right {
+  right: 0;
+}
+
+.options__panel--left {
+  left: 0;
+}
+
+/* A floating button sits at the bottom of the window, so open upward. */
+.options--floating .options__panel {
+  top: auto;
+  bottom: calc(100% + 0.4rem);
+}
+
+.options__group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.options__group legend {
+  padding: 0;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.options__choice {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.15rem 0;
+  cursor: pointer;
+}

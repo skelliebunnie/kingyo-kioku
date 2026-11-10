@@ -1,0 +1,45 @@
+/* src/styles/AnswerDetails.css */
+.answer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.answer p {
+  margin: 0;
+}
+
+.answer__verdict {
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding-left: 0.6rem;
+  border-left: 4px solid var(--level-3);
+}
+
+.answer__verdict.is-wrong {
+  border-left-color: var(--level-1);
+}
+
+.answer__translation {
+  opacity: 0.8;
+}
+
+.answer__progress {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+}
+
+.answer .info {
+  display: flex;
+  gap: 1rem;
+  
+  .correct-guess {
+    color: var(--green-500);
+  }
+  
+  .wrong-guess {
+    color: var(--red-500);
+  }
+}

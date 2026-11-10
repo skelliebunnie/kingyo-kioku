@@ -1,0 +1,79 @@
+.site-header {
+	background: var(--primary-500);
+	padding: 0.5rem 0.5rem 1.5rem;
+	color: var(--neutral);
+	
+	.site-title {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		font-family: "Zen Kurenaido", cursive;
+		font-weight: normal;
+		font-size: 3rem;
+	}
+}
+
+.options {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	
+	.options__panel {
+		right: 0;
+		left: auto;
+	}
+}
+
+.nav-set {
+	a {
+		text-decoration: none;
+		font-size: larger;
+		color: var(--neutral);
+		border: none;
+	}
+}
+
+@media (max-width: 767px) {
+	.nav-set .site-nav {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+@media (min-width: 768px) {
+	.site-header {
+		display: flex;
+		align-items: end;
+		justify-content: space-between;
+		.site-title { font-size: 4rem; }
+	}
+	
+	.nav-set {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row-reverse;
+		gap: 1rem;
+	}
+}
+
+.site-nav {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	align-items: center;
+	justify-content: space-between;
+	
+	.menu {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		gap: 1rem;
+	}
+	
+	.user {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+}

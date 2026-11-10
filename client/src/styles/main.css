@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=LINE+Seed+JP&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Kurenaido&display=swap');
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: 'Noto Sans', sans-serif;
+}
+
+[lang="ja"] {
+	font-family: "LINE Seed JP";
+}
+
+.jp-handwritten [lang="ja"] {
+	font-family: "Zen Kurenaido", cursive;
+}
+
+a {
+	color: var(--red);
+	text-decoration: none;
+	border-bottom: 1px solid var(--red);
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	
+	&:hover {
+		color: var(--green-500);
+		border-bottom-color: var(--green-500);
+	}
+}
+
+hr {
+	border: 0;
+	outline: 0;
+	height: 2px;
+	width: 100%;
+	background: linear-gradient(to left, var(--primary-100), var(--primary-400), var(--primary-100));
+}
+
+svg.lucide {
+	display: inline-block;
+}
+
+button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.25rem 0.5rem;
+	border: 0;
+	border-radius: 8px;
+	background-color: var(--neutral-100);
+	border-bottom: 4px solid var(--neutral-600);
+	color: var(--neutral-900);
+	outline: 0;
+	
+	&.button__warn {
+		background: var(--red-300);
+		border-color: var(--red-500);
+		color: var(--neutral);
+		
+		&:hover,
+		&:active {
+			background: var(--red-600);
+			border-color: var(--red-300);
+		}
+	}
+	
+	&.button__info {
+		background: var(--secondary-500);
+		border-color: var(--secondary-600);
+		color: var(--neutral);
+		
+		&:hover,
+		&:active {
+			background: var(--secondary-600);
+			border-color: var(--secondary-300);
+		}
+	}
+}
+
+/* site-content */
+.site-content {
+	display: flex;
+	flex-direction: column;
+}

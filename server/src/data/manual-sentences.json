@@ -1,0 +1,51 @@
+[
+  {
+    "ja": "あくる日の午過ぎまで他愛もなく眠っていました",
+    "en": "I slept aimlessly until the afternoon of the next day.",
+    "word": "あくる日",
+    "target": "あくる日",
+    "reading": "あくるひ"
+  },
+	{
+    "ja": "あくる日また来られます",
+    "en": "You can come again the next day.",
+    "word": "あくる日",
+    "target": "あくる日",
+    "reading": "あくるひ"
+  },
+	{
+		"ja": "あの人は髪の色がピンク！",
+		"en": "That person's hair is pink!",
+		"word": "あの人",
+		"target": "あの人",
+		"reading": "あのひと"
+	},
+	{
+		"ja": "それがあの人のほんとうの腕前というものなのだ",
+		"en": "That's that person's true skill",
+		"word": "あの人",
+		"target": "あの人",
+		"reading": "あのひと"
+	},
+	{
+		"ja": "「お父さんとうまく行ってないのか」「…」「すまない。立ち入ったことだった」",
+		"en": "'You don't get on well with your father?' '...' 'Sorry, that was none of my business.'",
+		"word": "うまく行く",
+		"target": "うまく行って",
+		"reading": "うまくいって"
+	},
+	{
+		"ja": "まず大丈夫うまく行くと思われる一つの思い付きだった",
+		"en": "First of all, it was an idea that I thought would work fine.",
+		"word": "うまく行く",
+		"target": "うまく行く",
+		"reading": "うまくいく"
+	},
+	{
+		"ja": "どうもお仕事がうまく行かないで",
+		"en": "I'm having trouble at work.",
+		"word": "うまく行く",
+		"target": "うまく行かない",
+		"reading": "うまくいかない"
+	}
+]

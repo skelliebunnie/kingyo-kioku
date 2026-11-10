@@ -1,0 +1,5 @@
+.site-footer {
+	background: var(--secondary-200);
+	padding: 0.5rem;
+	text-align: center;
+}

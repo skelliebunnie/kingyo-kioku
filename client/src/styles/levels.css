@@ -1,0 +1,10 @@
+/* src/styles/levels.css
+   Familiarity colors: dark red (never seen) -> dark green (very well known).
+   Import this wherever a level color is used; the variables are global. */
+:root {
+  --level-0: #8b1a1a; /* dark red */
+  --level-1: #d6322f; /* red */
+  --level-2: #ee8a1c; /* orange */
+  --level-3: #4aa84f; /* green */
+  --level-4: #1b6a37; /* dark green */
+}

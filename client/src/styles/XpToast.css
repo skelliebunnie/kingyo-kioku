@@ -1,0 +1,99 @@
+/* src/components/XpToast.css - deliberately plain; restyle to match the rest of the app. */
+
+/* Floats in the bottom-right corner above everything else, and never blocks clicks. */
+.xp-region {
+  position: relative !important;
+  /* z-index: 30; */
+  /* pointer-events: none; */
+}
+
+.xp-toast {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 0;
+  min-width: 12rem;
+  padding: 0.75rem 1rem;
+  color: CanvasText;
+  background: Canvas;
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-left: 4px solid var(--level-3, #4aa84f);
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  animation: xp-toast ease both;  /*duration is set inline by the component */
+}
+
+.xp-toast.is-level-up {
+  border-left-color: var(--level-2, #ee8a1c);
+}
+
+.xp-toast p {
+  margin: 0;
+}
+
+.xp-toast__levelup {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.xp-toast__gain {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.xp-toast__total {
+  opacity: 0.8;
+}
+
+.xp-toast__bar {
+  height: 0.4rem;
+  margin-top: 0.5rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(128, 128, 128, 0.25);
+}
+
+.xp-toast__fill {
+  height: 100%;
+  background: var(--accent, #2e7d4f);
+}
+
+/* Rise in, hold, drift up and fade out. */
+@keyframes xp-toast {
+  0% {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  10% {
+    opacity: 1;
+    transform: none;
+  }
+  80% {
+    opacity: 1;
+    transform: none;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+}
+
+/* No movement for people who ask for less of it: just fade. */
+@media (prefers-reduced-motion: reduce) {
+  .xp-toast {
+    animation-name: xp-toast-fade;
+  }
+
+  @keyframes xp-toast-fade {
+    0% {
+      opacity: 0;
+    }
+    10%,
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
