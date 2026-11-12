@@ -12,7 +12,7 @@ import progressRouter from './routes/progress.js';
 export function createApp() {
   const app = express();
 
-  if (process.env.VERCEL) app.set("trust proxy", "loopback");
+  app.set("trust proxy", "loopback");
   if (process.env.CLIENT_ORIGIN) {
     app.use(cors({ origin: process.env.CLIENT_ORIGIN.split(",").map((s) => s.trim()), credentials: true }));
   }
