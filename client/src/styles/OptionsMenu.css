@@ -8,8 +8,27 @@
 .options--floating {
   position: fixed;
   left: 1.5rem;
-  bottom: 1.5rem;
+  bottom: 3rem;
+  top: unset;
   z-index: 40;
+}
+
+.options--mobile {
+  display: inline-block;
+}
+
+.options--desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .options--mobile {
+    display: none;
+  }
+  
+  .options--desktop {
+    display: inline-block;
+  }
 }
 
 .options__button {
@@ -40,12 +59,19 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
+.options.options--right {
+  left: unset;
+  right: 0.5rem;
+}
+
 .options__panel--right {
   right: 0;
+  left: unset;
 }
 
 .options__panel--left {
   left: 0;
+  right: unset;
 }
 
 /* A floating button sits at the bottom of the window, so open upward. */

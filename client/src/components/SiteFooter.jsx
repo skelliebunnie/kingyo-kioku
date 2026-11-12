@@ -1,3 +1,4 @@
+import OptionsMenu from "../components/OptionsMenu";
 import "../styles/SiteFooter.css";
 
 function getYear() {
@@ -9,7 +10,8 @@ const SiteFooter = () => {
 	
 	return (
 		<footer className="site-footer">
-		<p>SkellieBunnie &copy; {year}</p>
+				<p>SkellieBunnie &copy; {year}</p>
+				<OptionsMenu />
 		</footer>
 	)
 }

@@ -47,7 +47,7 @@ async function buildCard(userId, row) {
   // Rotate through the word's sentences: never-answered ones first, then the one this user answered
   // longest ago (never the one just shown), so people see different examples instead of memorizing one.
   const [[sw]] = await pool.query(
-    `SELECT sw.sentence_id, sw.start_idx, sw.end_idx, s.ja
+    `SELECT sw.sentence_id, sw.start_idx, sw.end_idx, s.ja, s.en
      FROM sentence_words sw
      JOIN sentences s ON s.id = sw.sentence_id
      LEFT JOIN (
@@ -75,6 +75,8 @@ async function buildCard(userId, row) {
       target: sw.ja.slice(sw.start_idx, sw.end_idx),
       after: sw.ja.slice(sw.end_idx),
     },
+    // Sent with the card so the client can show it if the user has asked to (null if there isn't one).
+    translation: sw.en ?? null,
   };
 }
 

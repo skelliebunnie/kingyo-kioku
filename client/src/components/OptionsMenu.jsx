@@ -8,8 +8,8 @@ import { useEffect, useId, useRef, useState } from "react";
 import { useSettings } from "../context/SettingsContext";
 import "../styles/OptionsMenu.css";
 
-export default function OptionsMenu({ floating = false, align = "right" }) {
-  const { theme, setTheme, themes, handwritten, setHandwritten, showEnglishSentence, setShowEnglishSentence } = useSettings();
+export default function OptionsMenu({ floating = false, align = "right", mobile = false, desktop = false }) {
+  const { theme, setTheme, themes, handwritten, setHandwritten, showTranslation, setShowTranslation } = useSettings();
   const [open, setOpen] = useState(false);
   const wrapRef = useRef(null);
   const buttonRef = useRef(null);
@@ -36,7 +36,7 @@ export default function OptionsMenu({ floating = false, align = "right" }) {
   }, [open]);
 
   return (
-    <div className={`options${floating ? " options--floating" : ""}`} ref={wrapRef}>
+    <div className={`options${floating ? " options--floating" : ""} ${mobile ? " options--mobile" : desktop ? "options--desktop" : ""}`} ref={wrapRef}>
       <button
         ref={buttonRef}
         type="button"
@@ -64,7 +64,8 @@ export default function OptionsMenu({ floating = false, align = "right" }) {
             <input type="checkbox" checked={handwritten} onChange={(e) => setHandwritten(e.target.checked)} />Handwriting Font (JP)
           </label>
           <label className="options__choice">
-            <input type="checkbox" checked={showEnglishSentence} onChange={(e) => setShowEnglishSentence(e.target.checked)} />Show English Sentence
+            <input type="checkbox" checked={showTranslation} onChange={(e) => setShowTranslation(e.target.checked)} />
+            Show English sentence
           </label>
         </div>
       )}

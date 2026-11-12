@@ -30,7 +30,7 @@ function load() {
   return {
     theme: themeIsKnown ? saved.theme : systemTheme(),
     handwritten: saved?.handwritten === true,
-    showEnglishSentence: saved?.showEnglishSentence === true,
+    showTranslation: saved?.showTranslation === true,
   };
 }
 
@@ -69,10 +69,10 @@ export default function SettingsProvider({ children }) {
       theme: options.theme,
       handwritten: options.handwritten,
       themes: THEMES,
-      showEnglishSentence: options.showEnglishSentence,
+      showTranslation: options.showTranslation,
       setTheme: (theme) => update({ theme }),
       setHandwritten: (handwritten) => update({ handwritten }),
-      setShowEnglishSentence: (showEnglishSentence) => update({ showEnglishSentence }),
+      setShowTranslation: (showTranslation) => update({ showTranslation }),
       wrapperClasses: [options.theme, options.handwritten && HANDWRITTEN_CLASS].filter(Boolean).join(" "),
     }),
     [options, update]

@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { toHiragana } from "wanakana";
 import api, { errorMessage } from "../api/client";
 import { useAuth } from "../context/AuthContext";
+import { useSettings } from "../context/SettingsContext";
 import RecentWords from "../components/RecentWords";
 import SentenceCard from "../components/SentenceCard";
 import SetPicker from "../components/SetPicker";
@@ -29,6 +30,7 @@ const shouldAutoOpen = (entry) => false;
 
 export default function StudyPage() {
   const { user: authUser, refresh } = useAuth();
+  const { showTranslation } = useSettings();
   const [status, setStatus] = useState("loading"); // "loading" | "ready" | "empty" | "error"
   const [emptyReason, setEmptyReason] = useState(null);
   const [card, setCard] = useState(null);
@@ -237,6 +239,7 @@ export default function StudyPage() {
         </div>
 
         <SentenceCard sentence={card.sentence} level={card.level} />
+        {showTranslation && card.translation && <p className="flash__translation">{card.translation}</p>}
 
         <form className="flash__form" onSubmit={handleSubmit}>
           {/* <label htmlFor="reading">Reading of the highlighted word</label> */}

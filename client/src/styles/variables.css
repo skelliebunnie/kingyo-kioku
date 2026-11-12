@@ -1,8 +1,11 @@
 :root {
+  --transition: all 0.3s ease-in-out;
+  
 	--neutral: #f9f8f5;
 	--red: #ff3a20;
 	--green: #edf060;
 	
+  --neutral-50: #f7f7f7;
 	--neutral-100: #e8e7e3;
   --neutral-200: #d1cfc7;
   --neutral-300: #bab6ab;

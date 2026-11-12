@@ -1,5 +1,21 @@
 .site-footer {
+	position: relative;
 	background: var(--secondary-200);
 	padding: 0.5rem;
 	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	
+	.options {
+		left: unset;
+		right: unset; 
+		
+		.options__panel {
+			position: absolute;
+			top: -1rem;
+			transform: translateY(-100%) translateX(20%);
+			right: 2rem;
+		}
+	}
 }

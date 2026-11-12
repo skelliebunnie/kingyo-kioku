@@ -1,8 +1,14 @@
 const HomePage = () => {
 	return (
 		<>
-		<h1>金魚（の）記憶</h1>
-		<p>This is an "endless flashcard" game - enter your guess at the reading of the kanji as seen in a sentence and level up! Create an account for free (for now) to get started!</p>
+		<div className="wrapper">
+		<section className="container">
+			<p>This is an "endless flashcard" <mark>game</mark> - enter the reading of the kanji and get <em>experience</em> to <strong>Level Up</strong> for every correct answer! Create an account for free (for now) to get started!</p>
+		</section>
+		<section className="container">
+			<img src="assets/screenshot_study.png" alt="Screenshot of the study page" />
+		</section>
+		</div>
 		</>
 	)
 }

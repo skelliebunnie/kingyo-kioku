@@ -69,6 +69,13 @@
   color: var(--red-500);
 }
 
+/* The English sentence, when the "Show English sentence" option is on. */
+.flash__translation {
+  margin: -0.75rem 0 0;
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
 .flash__form {
   display: flex;
   flex-direction: column;

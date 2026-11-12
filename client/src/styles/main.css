@@ -23,6 +23,7 @@ a {
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
+	gap: 0.5rem;
 	
 	&:hover {
 		color: var(--green-500);
@@ -36,6 +37,12 @@ hr {
 	height: 2px;
 	width: 100%;
 	background: linear-gradient(to left, var(--primary-100), var(--primary-400), var(--primary-100));
+}
+
+mark {
+	background-color: var(--accent-500);
+	color: white;
+	padding: 0 3px;
 }
 
 svg.lucide {
@@ -83,4 +90,28 @@ button {
 .site-content {
 	display: flex;
 	flex-direction: column;
+	padding: 1rem;
+	background: var(--secondary-50);
+	
+	header {
+		text-align: center;
+	}
+}
+
+.container {
+	margin: 1rem auto;
+	padding: 0 1rem;
+	max-width: 90%;
+	display: flex;
+	align-items: center;
+}
+
+@media (min-width: 768px) {
+	
+	.site-content > .wrapper {
+		max-width: 75%;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
 }

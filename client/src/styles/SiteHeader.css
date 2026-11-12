@@ -2,21 +2,26 @@
 	background: var(--primary-500);
 	padding: 0.5rem 0.5rem 1.5rem;
 	color: var(--neutral);
+	text-align: center;
 	
-	.site-title {
+	.site-title a {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		gap: 1rem;
 		font-family: "Zen Kurenaido", cursive;
 		font-weight: normal;
 		font-size: 3rem;
+		color: inherit;
+		text-decoration: none;
+		border: 0;
 	}
 }
 
-.options {
+.options--desktop {
 	position: absolute;
-	top: 1rem;
-	right: 1rem;
+	top: 0.5rem;
+	right: 0.5rem;
 	
 	.options__panel {
 		right: 0;
@@ -30,6 +35,10 @@
 		font-size: larger;
 		color: var(--neutral);
 		border: none;
+		
+		&:last-child {
+			margin-right: 1rem;
+		}
 	}
 }
 
