@@ -255,6 +255,7 @@ export default function StudyPage() {
             autoCorrect="off"
             spellCheck={false}
             disabled={submitting}
+            autoFocus
           />
           {error && (
             <p className="flash__error" role="alert">
