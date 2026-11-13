@@ -2,7 +2,7 @@
 
 .recent-wrap {
   position: relative; /* the dropdown panel is positioned against this */
-  background: var(--neutral-100);
+  background: var(--secondary-100);
 }
 
 /* One row, never wraps. Items keep their natural size, so when the row is full the oldest
@@ -38,8 +38,8 @@
   white-space: nowrap;
   
   .recent__word {
-    font-size: 2rem;
-    padding: 0 1rem;
+    font-size: 1.25rem;
+    padding: 0.15rem 0.5rem;
   }
   
   .data > p {

@@ -81,6 +81,10 @@
   --accent-800: #67003e;
   --accent-900: #40002c;
   --accent-950: #28001f;
+  
+  .button__info {
+    color: var(--neutral-900);
+  }
 }
 
 .dark {
@@ -186,6 +190,8 @@
   .site-footer {
     background: var(--secondary-600);
   }
+  
+  .button__info { color: var(--neutral-900); }
 }
 
 .sakura {

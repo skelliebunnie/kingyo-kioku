@@ -90,7 +90,6 @@ button {
 .site-content {
 	display: flex;
 	flex-direction: column;
-	padding: 1rem;
 	background: var(--secondary-50);
 	
 	header {
